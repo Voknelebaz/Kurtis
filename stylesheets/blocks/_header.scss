@@ -1,0 +1,112 @@
+@import "../base/variables";
+
+.header {
+    padding: 2.5625rem;
+    // .header__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    // .header__logo
+    &__logo {
+        cursor: pointer;
+    }
+    &__logo img {
+        margin-right: 1.125rem;
+    }
+    // .header__logo-text
+    &__logo-text {
+        color: $logo-text;
+        font-family: Vibur;
+        font-size: 3.125rem;
+        font-weight: 400;
+    }
+
+    &__logo-text:hover{
+        color:$primary-hover;
+    }
+    // .header__controls
+    &__controls {
+    }
+}
+.controls {
+    display: flex;
+    align-items: center;
+    // .controls__language-select
+    &__language-select {
+    }
+    &__language-select::after {
+        cursor: pointer;
+        content: "";
+        position: relative;
+        top: -0.1rem;
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-right: 0.18em solid black;
+        border-top: 0.18em solid black;
+        transform: rotate(135deg);
+        margin-right: 1.875rem;
+        margin-left: 0.3em;
+    }
+    // .controls__buttons
+    &__buttons {
+        display: flex;
+        gap: 1.25rem;
+    }
+    // .controls__burger
+    &__burger {
+        width: 32px;
+        height: 24px;
+        cursor: pointer;
+        right: 2rem;
+        top: 2rem;
+        z-index: 20;
+        margin-left: 2.8125rem;
+        margin-top: 1.3rem;
+    }
+
+    &__burger span {
+        width: 100%;
+        height: 4px;
+        background-color: black;
+        border-radius: 12px;
+        display: block;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    &__burger span::before,
+    &__burger span::after {
+        content: "";
+        width: 100%;
+        background-color: black;
+        display: block;
+        transition: all 0.5s ease-in-out;
+        border-radius: 12px;
+        height: 4px;
+    }
+
+    &__burger span::before {
+        transform: translateY(-10px);
+    }
+
+    &__burger span::after {
+        transform: translateY(10px);
+        margin-top: -4px;
+    }
+
+    &__burger.active span {
+        background-color: transparent;
+    }
+
+    &__burger.active span::before {
+        transform: rotateZ(45deg) translateY(0);
+    }
+
+    &__burger.active span::after {
+        transform: rotateZ(-45deg) translateY(0);
+    }
+
+    
+}

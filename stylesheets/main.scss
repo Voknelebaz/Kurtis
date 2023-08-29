@@ -1,0 +1,76 @@
+@import "./base/_base";
+@import "../assets/fonts/fonts";
+@import "./blocks/blockBase";
+
+body {
+	font-family: "Montserrat";
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+.button {
+	border-radius: 4px;
+	background: $primary-button-bg;
+	box-shadow: 0rem 0.25rem 0.125rem 0rem rgba(0, 0, 0, 4);
+	padding: 0.875rem 1.5625rem 0.875rem 1.5625rem;
+	cursor: pointer;
+}
+
+.button:hover {
+	background: $primary-hover;
+	box-shadow: 0rem 0.25rem 0.125rem 0rem rgba(0, 0, 0, 4);
+}
+
+.button-light {
+	background-color: $btn-light-bg;
+	border: 0.0625rem solid#979797;
+	box-shadow: none;
+	border-radius: 0.25rem;
+}
+
+.button__text {
+	color: $primary-button-text;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 1rem;
+	font-weight: 600;
+}
+.button-light__text {
+	color: $btn-light-text;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+[class*="__container"] {
+	max-width: 76.875rem;
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+}
+
+@media (max-width: 69.3738rem) {
+	[class*="__container"] {
+		max-width: 60.625rem;
+	}
+}
+
+@media (max-width: 61.9363rem) {
+	[class*="__container"] {
+		max-width: 75z0px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	[class*="__container"] {
+		max-width: none;
+	}
+}

@@ -241,12 +241,15 @@ template {
 }
 
 .header {
+  z-index: 99;
+  display: fixed;
   padding: 2.5625rem;
 }
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1.5625rem;
 }
 .header__logo {
   cursor: pointer;
@@ -254,11 +257,22 @@ template {
 .header__logo img {
   margin-right: 1.125rem;
 }
+@media (max-width: 24.125rem) {
+  .header__logo img {
+    width: 2.125rem;
+    margin-right: 0.7rem;
+  }
+}
 .header__logo-text {
   color: #000;
   font-family: Vibur;
   font-size: 3.125rem;
   font-weight: 400;
+}
+@media (max-width: 24.125rem) {
+  .header__logo-text {
+    font-size: 2.125rem;
+  }
 }
 .header__logo-text:hover {
   color: #FFC43B;
@@ -266,6 +280,11 @@ template {
 .controls {
   display: flex;
   align-items: center;
+}
+@media (max-width: 54.4375rem) {
+  .controls__language-select {
+    display: none;
+  }
 }
 .controls__language-select::after {
   cursor: pointer;
@@ -285,9 +304,14 @@ template {
   display: flex;
   gap: 1.25rem;
 }
+@media (max-width: 54.4375rem) {
+  .controls__buttons {
+    display: none;
+  }
+}
 .controls__burger {
-  width: 32px;
-  height: 24px;
+  width: 2rem;
+  height: 1.5rem;
   cursor: pointer;
   right: 2rem;
   top: 2rem;
@@ -295,11 +319,16 @@ template {
   margin-left: 2.8125rem;
   margin-top: 1.3rem;
 }
+@media (max-width: 39rem) {
+  .controls__burger {
+    margin-left: 0.5rem;
+  }
+}
 .controls__burger span {
   width: 100%;
-  height: 4px;
+  height: 0.25rem;
   background-color: black;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   display: block;
   transition: background-color 0.5s ease-in-out;
 }
@@ -309,15 +338,15 @@ template {
   background-color: black;
   display: block;
   transition: all 0.5s ease-in-out;
-  border-radius: 12px;
-  height: 4px;
+  border-radius: 0.75rem;
+  height: 0.25rem;
 }
 .controls__burger span::before {
-  transform: translateY(-10px);
+  transform: translateY(-0.625rem);
 }
 .controls__burger span::after {
-  transform: translateY(10px);
-  margin-top: -4px;
+  transform: translateY(0.625rem);
+  margin-top: -0.25rem;
 }
 .controls__burger.active span {
   background-color: transparent;
@@ -329,6 +358,107 @@ template {
   transform: rotateZ(-45deg) translateY(0);
 }
 
+@media (max-width: 39rem) {
+  .header {
+    padding: 0.5rem;
+  }
+}
+.menu__mobile {
+  margin-left: 120%;
+  width: 19rem;
+  display: block;
+  z-index: 98;
+  box-shadow: 0.125rem 0.125rem 1.5625rem 0rem rgba(0, 0, 0, 0.1490196078);
+  padding-left: 1.8125rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 54.4375rem) {
+  .menu__mobile {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+.menu__mobile.active {
+  right: 80%;
+  margin-left: auto;
+}
+
+.menu__mobile li {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0.75rem;
+}
+
+@media (max-width: 54.4375rem) {
+  .menu__mobile li {
+    text-align: center;
+  }
+}
+.menu__mobile-link {
+  text-decoration: none;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-left: 0.725rem;
+  padding: 0.25rem;
+}
+
+.menu__mobile li:hover {
+  background-color: #FFC43B;
+}
+
+.mobile__language-select {
+  margin-bottom: 0.525rem;
+  margin-left: 0.725rem;
+}
+
+@media (max-width: 54.4375rem) {
+  .mobile__language-select {
+    text-align: center;
+  }
+}
+.mobile__language-select::after {
+  cursor: pointer;
+  content: "";
+  position: relative;
+  top: -0.1rem;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 0.18em solid #000;
+  border-top: 0.18em solid #000;
+  transform: rotate(135deg);
+  margin-right: 1.875rem;
+  margin-left: 0.3em;
+}
+
+.mobile__buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 0.725rem;
+}
+
+@media (max-width: 54.4375rem) {
+  .mobile__language-select {
+    text-align: center;
+  }
+  .mobile__buttons {
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+@media (min-width: 54.4375rem) {
+  .mobile__buttons {
+    display: none;
+  }
+  .mobile__language-select {
+    display: none;
+  }
+}
 body {
   font-family: "Montserrat";
 }

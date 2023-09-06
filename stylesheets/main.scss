@@ -57,20 +57,4 @@ body {
 	padding: 0 0.9375rem;
 }
 
-@media (max-width: 69.3738rem) {
-	[class*="__container"] {
-		max-width: 60.625rem;
-	}
-}
 
-@media (max-width: 61.9363rem) {
-	[class*="__container"] {
-		max-width: 75z0px;
-	}
-}
-
-@media (max-width: 767.98px) {
-	[class*="__container"] {
-		max-width: none;
-	}
-}

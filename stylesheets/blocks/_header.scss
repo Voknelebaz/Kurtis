@@ -1,9 +1,9 @@
 @import "../base/variables";
 
 .header {
-    z-index: 99;
-    display: fixed;
-    padding: 2.5625rem;
+    padding-bottom: 5.8125rem;
+    padding-top: 2.5625rem;
+    position: relative;
     // .header__container
     &__container {
         display: flex;
@@ -91,6 +91,12 @@
         margin-left: 2.8125rem;
         margin-top: 1.3rem;
     }
+
+    &__burger:hover span::after,
+    &__burger:hover span::before,
+    &__burger:hover span {
+        background-color: $primary-hover;
+    }
     @media (max-width: 39rem) {
         &__burger {
             margin-left: 0.5rem;
@@ -144,26 +150,31 @@
 }
 
 .menu__mobile {
-    margin-left: 120%;
-    width: 19rem;
+    width: 98.5%;
     display: block;
-    z-index: 98;
+    height: 100%;
+        
+    z-index: 0;
     box-shadow: 0.125rem 0.125rem 1.5625rem 0rem $box-shadow-mobile;
     padding-left: 1.8125rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+    transition: 0.5s;
+    background-color: $mobile-bg;
+    position: absolute;
+    left: 60%;
+    top: -200%;
 }
-
 @media (max-width: 54.4375rem) {
     .menu__mobile {
         width: 100%;
         padding-left: 0;
     }
 }
-
 .menu__mobile.active {
-    right: 80%;
-    margin-left: auto;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
 }
 
 .menu__mobile li {
@@ -187,7 +198,10 @@
     margin-left: 0.725rem;
     padding: 0.25rem;
 }
-.menu__mobile li:hover {
+.menu___mobile-list {
+    transition: 0.5s;
+}
+.menu__mobile-item a:hover {
     background-color: $primary-hover;
 }
 
@@ -236,5 +250,10 @@
     }
     .mobile__language-select {
         display: none;
+    }
+}
+@media (max-width: 58.75rem) {
+    .header {
+        padding-bottom: 1.8125rem;
     }
 }

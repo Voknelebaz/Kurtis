@@ -1,0 +1,190 @@
+.cards {
+    padding: 3.5rem 0;
+    // .cards__container
+    &__container {
+    }
+    // .cards__body
+    &__body {
+    }
+    // .cards__title
+    &__title {
+        position: relative;
+        color: $primary-title;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 2.25rem;
+        font-weight: 800;
+        margin-bottom: 3.25rem;
+    }
+    &__title::before {
+        position: absolute;
+        top: 100%;
+        left: 45%;
+        width: 7.25rem;
+        border-bottom: 0.6rem solid $title-line;
+        content: "";
+        padding-bottom: 0.3125rem;
+    }
+    // .cards__slider
+    &__slider {
+    }
+
+    // .cards__slider-wrapper
+    &__slider-wrapper {
+    }
+    // .cards__slider-slide
+    &__slider-slide {
+        padding-bottom: 5.9375rem;
+    }
+
+    &__slider-slide img {
+        position: relative;
+        text-align: center;
+    }
+
+    &__slide-info {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+    }
+
+    &__slide-button button {
+        background-color: $card-btn-bg;
+        padding: 0.25rem 1.25rem;
+        border-radius: 2.4375rem;
+        color: $card-btn-text;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+    &__slide-button--yellow button {
+        background-color: $primary-hover;
+        padding: 0.25rem 1.25rem;
+        border-radius: 2.4375rem;
+        color: $card-btn-text;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    // .cards__slide-title
+    &__slide-title {
+        color: $card-title;
+        font-size: 2.25rem;
+        font-weight: 800;
+        margin-bottom: 1.25rem;
+    }
+    // .cards__slide-text
+    &__slide-text {
+        color: $card-text;
+        font-size: 1.25rem;
+        max-width: 15.6875rem;
+        margin-bottom: 2.3125rem;
+    }
+    // .cards__slide-link
+    &__slide-link {
+        color: $card-link;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    @media (max-width: 65.9375rem) {
+        &__slide-info {
+            top: 15%;
+            left: 5%;
+        }
+        &__slide-title {
+            font-size: 1.5rem;
+        }
+        // .cards__slide-text
+        &__slide-text {
+            font-size: 1rem;
+        }
+        // .cards__slide-link
+        &__slide-link {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+    }
+    @media (max-width: 51.9375rem) {
+        &__slide-info {
+            top: 10%;
+            left: 5%;
+        }
+        &__slide-title {
+            margin-bottom: 0.5rem;
+        }
+        // .cards__slide-text
+        &__slide-text {
+            margin-bottom: 1rem;
+        }
+        // .cards__slide-link
+        &__slide-link {
+        }
+        &__slide-new {
+            top: 10%;
+            left: 5%;
+        }
+    }
+    @media (max-width: 38.8125rem) {
+        &__slide-text {
+            margin-bottom: 0.5rem;
+        }
+    }
+    @media (max-width: 34.3125rem) {
+        &__slide-title {
+            font-size: 1rem;
+        }
+        // .cards__slide-text
+        &__slide-text {
+            font-size: 0.8rem;
+        }
+        // .cards__slide-link
+        &__slide-link {
+            font-size: 0.8rem;
+        }
+    }
+    @media (max-width: 28.4375rem) {
+        &__slide-title {
+            margin-bottom: 0;
+        }
+        // .cards__slide-text
+        &__slide-text {
+            display: none;
+        }
+        &__slide-link {
+            margin-bottom: 0;
+        }
+        &__slider-slide {
+            padding-bottom: 2.9375rem;
+        }
+        // .cards__slide-link
+    }
+
+    @media (max-width: 22.3125rem) {
+        &__slide-button button {
+            background-color: $card-btn-bg;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2.4375rem;
+            color: $card-btn-text;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        &__slider-slide--light img {
+            opacity: 0.5;
+        }
+    }
+    @media (max-width: 19.875rem) {
+        &__slide-info {
+            top: 2%;
+            left: 2%;
+        }
+        &__slide-title {
+            font-size: 0.8rem;
+        }
+    }
+
+    .swiper-pagination {
+        margin-top: 5.9375rem;
+    }
+}

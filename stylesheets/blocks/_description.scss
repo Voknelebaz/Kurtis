@@ -1,0 +1,117 @@
+.description {
+    background-color: $description-bg;
+    padding: 3.125rem 0;
+    // .description__container
+    &__container {
+    }
+    // .description__body
+    &__body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    // .description__title
+    &__title {
+        order: 0;
+        position: relative;
+        color: $primary-title;
+        text-align: center;
+        font-size: 2.25rem;
+        font-weight: 800;
+        margin-bottom: 3.5rem;
+    }
+    &__title::before {
+        position: absolute;
+        top: 100%;
+        left: 30%;
+        width: 7.25rem;
+        border-bottom: 0.6rem solid $title-line;
+        content: "";
+    }
+
+    @media (max-width: 375px) {
+        &__title::before {
+            position: absolute;
+            top: 100%;
+            left: 30%;
+            width: 7.25rem;
+            border-bottom: none;
+            content: "";
+        }
+    } // .description__cards
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        gap: 4.375rem;
+    }
+
+    @media (max-width: 70.6875rem) {
+        &__cards {
+            gap: 1rem;
+        }
+    }
+    // .description__card
+    &__card {
+    }
+    // .description__button
+    &__button {
+    }
+}
+.card {
+    margin-bottom: 2.9375rem;
+    // .card_title
+    &_title {
+        color: $primary-title;
+        font-family: Poppins;
+        font-size: 1.375rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    // .card__image
+    &__image {
+        margin-bottom: 1.875rem;
+    }
+    // .card__text
+    &__text {
+        max-width: 13.9375rem;
+        margin-bottom: 1.75rem;
+        color: $primary-text;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.625rem;
+    }
+    // .card__link
+    &__link {
+        color: $primary-text;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.625rem;
+        text-decoration: none;
+    }
+    &__link:hover {
+        color: $primary-hover;
+    }
+    @media (max-width: 30.6875rem) {
+        &__text {
+            margin-bottom: 1.2rem;
+        }&__image {
+            margin-bottom: 1.2rem;
+        }
+    }
+}
+@media (max-width: 30.6875rem) {
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
+.button {
+    // .button__text
+    &__text-bold {
+        color: $primary-button-text;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 800;
+    }
+}

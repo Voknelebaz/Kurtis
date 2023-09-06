@@ -1,0 +1,110 @@
+.main {
+    // .main__container
+    padding-bottom: 2.75rem;
+    &__container {
+    }
+    // .main__body
+    &__body {
+        display: flex;
+        justify-content: space-around;
+    }
+    // .main__content
+    &__content {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    @media (max-width: 58.75rem) {
+        &__content {
+            text-align: center;
+            align-items: center;
+        }
+    }
+    // .main__info
+    &__info {
+        max-width: 32.625rem;
+    }
+    // .main__title
+    &__title {
+        color: $primary-title;
+        font-size: 4.625rem;
+        font-weight: 800;
+        line-height: 6.25rem;
+        margin-bottom: 2.1875rem;
+    }
+
+    // .main__text
+    &__text {
+        color: $primary-text;
+        font-size: 1.5rem;
+        line-height: 1.9375rem;
+        margin-bottom: 3rem;
+    }
+
+    // .main__button
+    &__button {
+        margin-bottom: 3rem;
+    }
+    @media (max-width: 35.625rem) {
+        &__title {
+            font-size: 2.625rem;
+            line-height: 4.25rem;
+            margin-bottom: 1.1875rem;
+        }
+        &__text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.5rem;
+        }
+        &__button {
+            margin-bottom: 1.5rem;
+        }
+    }
+    // .main__download
+
+    &__download {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+
+    // .main__download-text
+
+    &__download-text {
+        color: $download-color;
+
+        font-size: 0.875rem;
+
+        font-weight: 700;
+    }
+
+    &__download-image {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    &__download-image img {
+        border-radius: 0.3125rem;
+    }
+    // .main__image
+
+    &__image {
+    }
+
+    &__image img {
+        max-width: 100%;
+    }
+
+    @media (max-width: 58.75rem) {
+        &__image {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:470px){
+    .main{
+        padding-bottom: 1.5rem;
+    }
+}

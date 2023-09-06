@@ -20,14 +20,7 @@
         font-weight: 800;
         margin-bottom: 3.5rem;
     }
-    &__title::before {
-        position: absolute;
-        top: 100%;
-        left: 30%;
-        width: 7.25rem;
-        border-bottom: 0.6rem solid $title-line;
-        content: "";
-    }
+    
 
     @media (max-width: 375px) {
         &__title::before {

@@ -1,0 +1,157 @@
+.footer {
+    // .footer__wrapper
+
+    &__wrapper {
+        background-color: $footer-bg;
+        padding-top: 4.25rem;
+        padding-bottom: 2.375rem;
+    }
+
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__body
+
+    &__body {
+        display: flex;
+
+        justify-content: space-around;
+        padding-bottom: 3.125rem;
+    }
+
+    // .footer__links
+
+    &__links {
+        max-width: 14.375rem;
+    }
+
+    // .footer__logo
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3.5rem;
+    }
+    &__logo img {
+        width: 28px;
+        height: 28px;
+    }
+
+    // .footer__logo-text
+
+    &__logo-text {
+    }
+
+    // .footer__app
+
+    &__app {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 2.5rem;
+    }
+
+    // .footer__app-text
+
+    &__app-text {
+        margin-bottom: 0.875rem;
+    }
+
+    // .footer__app-link
+
+    &__app-link {
+    }
+    &__app-link img {
+        max-width: 6.5rem;
+        height: 1.875rem;
+    }
+    // .footer__follow
+
+    &__follow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .footer__follow-text
+
+    &__follow-text {
+        margin-bottom: 0.875rem;
+    }
+
+    // .footer__follow-links
+
+    &__follow-links {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    // .footer__follow-link
+
+    &__follow-link {
+    }
+
+    // .footer__menus
+
+    &__menus {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    // .footer__menu
+    &__menu {
+    }
+    &__menu:nth-child(1) {
+        margin-right: 59px;
+    }
+    &__menu:nth-child(2) {
+        margin-right: 112px;
+    }
+    &__menu:nth-child(3) {
+        margin-right: 41px;
+    }
+
+    // .footer__menu-list
+
+    &__menu-list {
+    }
+
+    // .footer__menu-item
+
+    &__menu-item {
+        margin-bottom: 14px;
+    }
+    &__menu-item:last-child {
+        margin-bottom: 0;
+    }
+    &__menu-item h4 {
+        margin-bottom: 2.1875rem;
+    }
+
+    // .footer__item-images
+
+    &__item-images {
+        display: flex;
+        gap: 1.3125rem;
+        margin-top: 3.75rem;
+    }
+
+    // .footer__image
+
+    &__image {
+    }
+
+    // .footer__copyrights
+
+    &__copyrights {
+        margin-left: 3rem;
+    }
+
+    // .footer__copyrights-text
+
+    &__copyrights-text {
+    }
+}

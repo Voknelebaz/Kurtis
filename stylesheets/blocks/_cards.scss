@@ -16,15 +16,7 @@
         font-weight: 800;
         margin-bottom: 3.25rem;
     }
-    &__title::before {
-        position: absolute;
-        top: 100%;
-        left: 45%;
-        width: 7.25rem;
-        border-bottom: 0.6rem solid $title-line;
-        content: "";
-        padding-bottom: 0.3125rem;
-    }
+    
     // .cards__slider
     &__slider {
     }

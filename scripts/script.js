@@ -7,3 +7,6 @@ burger.addEventListener('click', () => {
     menu__mobile.classList.toggle('active');
 });
 
+
+
+

@@ -375,19 +375,16 @@ template {
   }
 }
 .menu__mobile {
-  width: 98.5%;
-  display: block;
   height: 100%;
-  z-index: 0;
-  box-shadow: 0.125rem 0.125rem 1.5625rem 0rem rgba(0, 0, 0, 0.1490196078);
-  padding-left: 1.8125rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  transition: 0.5s;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
   background-color: #fff;
-  position: absolute;
-  left: 60%;
-  top: -200%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 @media (max-width: 54.4375rem) {
@@ -397,9 +394,9 @@ template {
   }
 }
 .menu__mobile.active {
-  left: 0;
   top: 0;
-  transition: 0.5s;
+  right: 0;
+  width: 15.625rem;
 }
 
 .menu__mobile li {

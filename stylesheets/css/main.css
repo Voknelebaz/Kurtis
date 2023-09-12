@@ -329,6 +329,7 @@ template {
 }
 .controls__burger:hover span::after, .controls__burger:hover span::before, .controls__burger:hover span {
   background-color: #ffc43b;
+  z-index: 20;
 }
 @media (max-width: 39rem) {
   .controls__burger {
@@ -375,10 +376,11 @@ template {
   }
 }
 .menu__mobile {
+  display: none;
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   right: 0;
   background-color: #fff;
@@ -394,11 +396,17 @@ template {
   }
 }
 .menu__mobile.active {
-  top: 0;
-  right: 0;
+  display: block;
   width: 15.625rem;
 }
 
+@media (max-width: 54.4375rem) {
+  .menu__mobile.active {
+    width: 100%;
+    padding-left: 0;
+    overflow-y: none;
+  }
+}
 .menu__mobile li {
   display: block;
   margin: 0 auto;
@@ -1122,4 +1130,10 @@ body {
   max-width: 76.875rem;
   margin: 0 auto;
   padding: 0 0.9375rem;
+}
+
+@media (max-width: 54.4375rem) {
+  .unscroll {
+    overflow: hidden;
+  }
 }
